@@ -64,3 +64,12 @@ def register():
 
 if __name__ == '__main__':
     app.run(debug=True, port=2025)
+
+@app.route('/debug/usuarios')
+def debug_usuarios():
+    conn = get_connection()
+    cursor = conn.cursor(as_dict=True)
+    cursor.execute("SELECT * FROM Usuario")
+    data = cursor.fetchall()
+    conn.close()
+    return jsonify(data)
