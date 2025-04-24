@@ -4,18 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Lienzo</title>
-    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../frontend/css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <a href="https://www.lienzo.mx/es/inicio/">
-            <img src="../assets/img/logo.png" alt="Lienzo Logo" width="300" height="100">
+            <img src="../frontend/assets/img/logo.png" alt="Lienzo Logo" width="300" height="100">
         </a>
     </header>
 
     <main>
-        <div class="login-container">
+        <!-- Contenedor de Login (existente) -->
+        <div class="login-container" id="loginContainer">
             <h2 class="title">Log in</h2>
             
             <form id="loginForm" class="login-form">
@@ -36,12 +37,35 @@
                 <div class="social-login">
                     <button type="button" id="googleLogin" class="social-btn google">
                         <i class="fab fa-google"></i> Continue with Google
-                      </button>                      
-                      <button type="button" id="facebookLogin" class="social-btn facebook">
+                    </button>                      
+                    <button type="button" id="facebookLogin" class="social-btn facebook">
                         <i class="fab fa-facebook-f"></i> Continue with Facebook
-                      </button>
-                      
+                    </button>
                 </div>
+            </form>
+
+            <!-- Añade esta línea NUEVA -->
+            <p class="register-link">Don't have an account? <a href="#" id="showRegister">Sign up</a></p>
+        </div>
+
+        <!-- Contenedor de Registro NUEVO (añadir esto) -->
+        <div class="login-container" id="registerContainer" style="display:none;">
+            <h2 class="title">Register</h2>
+            <form id="registerForm" class="login-form">
+                <div class="form-group">
+                    <label for="regName">Username</label>
+                    <input type="text" id="regName" placeholder="Your username" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input type="password" id="regPassword" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-primary">Create account</button>
+                <button type="button" id="cancelRegister" class="btn-secondary">Cancel</button>
             </form>
         </div>
     </main>
@@ -56,8 +80,7 @@
         </div>
     </footer>
 
-    <script src="../js/index.js" type="module"></script>
+    <script src="../frontend/js/index.js"></script>
 </body>
 </html>
-
 

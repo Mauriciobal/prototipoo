@@ -1,7 +1,7 @@
 /* login.css - Versión mejorada */
 @font-face {
     font-family: 'OpenMine';
-    src: url('../assets/fonts/OpenMine.ttf') format('truetype');
+    src: url('../frontend/assets/fonts/OpenMine.ttf') format('truetype');
 }
 
 :root {
@@ -186,4 +186,38 @@ input:focus {
         align-items: center;
         gap: 10px;
     }
+}
+/* ===== Estilos nuevos para el registro ===== */
+
+.register-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: var(--text-color);
+}
+
+.register-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
 }
